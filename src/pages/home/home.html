@@ -1,14 +1,34 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+      <ion-buttons end small>
+            <ion-badge>
+                    {{user_points}}
+              </ion-badge>
+      <button ion-fab color="dark" mini (click)="gotoProfilePage()"><ion-icon small name="person"></ion-icon></button>
+      </ion-buttons>
+      <ion-title>Create a new PoLP!</ion-title>
+      
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <!--<ion-fab top left>
+        <button ion-fab mini><ion-icon name="menu"></ion-icon></button>
+        <ion-fab-list>
+            <button ion-fab (click)="showTextCard()"><ion-icon name="list"></ion-icon></button>
+            <button ion-fab (click)="gotoHomePage()"><ion-icon name="camera"></ion-icon></button>
+            <button ion-fab (click)="gotoExplorePage()"><ion-icon name="pin"></ion-icon></button>
+            <button ion-fab (click)="gotoProfilePage()"><ion-icon name="person"></ion-icon></button>
+        </ion-fab-list>
+    </ion-fab>-->
+    <!--<ion-fab bottom left small>
+        <button ion-fab color="secondary" (click)="refresh()"><ion-icon name="refresh-circle"></ion-icon></button>
+    </ion-fab>-->
+    <ion-fab bottom left small>
+    <button ion-fab color="dark" (click)="gotoExplorePage()"><ion-icon name="pin"></ion-icon></button>
+    </ion-fab>
+    <ion-fab bottom center small>
+        <button ion-fab  (click)="takePicture()"><ion-icon name="camera"></ion-icon></button>
+    </ion-fab>
+
 </ion-content>

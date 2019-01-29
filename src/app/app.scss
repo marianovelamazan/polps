@@ -14,3 +14,14 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+html, body, ion-app, ion-content, ion-page, .nav-decor .fixed-content {
+  background-color: transparent !important;
+}
+
+@font-face {
+  font-family: 'VT323', monospace;
+  //src: url('https://fonts.googleapis.com/css?family=VT323');
+  font-weight: normal;
+  font-style: normal;
+}

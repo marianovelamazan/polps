@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "999032441750",
+    "firebase_url": "https://polps-175008.firebaseio.com",
+    "project_id": "polps-175008",
+    "storage_bucket": "polps-175008.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999032441750:android:764d2cb7da3280eb",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999032441750-75a7o5tdnvj26gvm7o7loigu6mmgk3vi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic.starter",
+            "certificate_hash": "b284d91d4d939c95dadd28221e1463f425a0e604"
+          }
+        },
+        {
+          "client_id": "999032441750-ivi02jlp789uf3b38bbfnfc5lmdo9fjq.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "999032441750-vuuc8f8e3g4ilhk4417la8knr9nnfa07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATT9Mp3pdErxH-vc_wo7nOTBCgDc-zGSY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999032441750-ivi02jlp789uf3b38bbfnfc5lmdo9fjq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

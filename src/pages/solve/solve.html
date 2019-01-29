@@ -1,0 +1,53 @@
+<ion-header>
+    
+      <ion-navbar color="dark">
+            <!--<ion-fab top left>-->
+                    <!--<button ion-fab mini color="dark" (click)="close()">
+                        <ion-icon name="close-circle"></ion-icon>
+                    </button>   -->
+                <!--</ion-fab>-->
+                <ion-title >Your PoLP solution</ion-title>
+            </ion-navbar >
+    </ion-header>
+<ion-content no-bounce>
+        <!--<ion-card id='polp_detail_card' >
+                <ion-card-header center>
+                       This is the problem: 
+                </ion-card-header>
+                <ion-card-content>
+                    <p>{{wp}}</p>
+                    <img id="pd_visual_problem" />
+               </ion-card-content>
+            </ion-card>-->
+  <canvas #my_canvas id="my_canvas"></canvas>
+  <!--<ion-fab top left>
+          <button ion-fab mini color="dark" (click)="close()"><ion-icon name="close-circle"></ion-icon></button>
+      </ion-fab>-->
+      
+      <ion-fab top right>
+          <button ion-fab mini color="secondary"><ion-icon name="create"></ion-icon></button>
+          <ion-fab-list>
+              <button ion-fab (click)="select()"><ion-icon name="arrow-round-up"></ion-icon></button>
+              <!--<button ion-fab (click)="draw_text()"><ion-icon name="list"></ion-icon></button>-->
+              <!--<button ion-fab (click)="draw_line()"><ion-icon name="create"></ion-icon></button>-->
+              <button ion-fab (click)="draw()"><ion-icon name="create"></ion-icon></button>
+              <button ion-fab (click)="draw_rect()"><ion-icon name="square-outline"></ion-icon></button>
+              <button ion-fab (click)="draw_circle()"><ion-icon name="radio-button-off"></ion-icon></button>
+              <button ion-fab (click)="draw_triangle()"><ion-icon name="arrow-dropup"></ion-icon></button>
+              <!--<button ion-fab (click)="undo_last_object()"><ion-icon name="undo"></ion-icon></button>-->
+              
+              <button ion-fab (click)="remove_object()"><ion-icon name="trash"></ion-icon></button>
+              <ion-fab>
+                  <button ion-fab mini color="dark" ><ion-icon name="color-fill"></ion-icon></button>
+                  <ion-fab-list side="left">
+                      <button color="light" *ngFor="let colour of availableColours" icon-only ion-button (click)="changeColour(colour)">
+                          <ion-icon [style.color]="colour" name="color-fill"></ion-icon>
+                      </button>
+                  </ion-fab-list> 
+              </ion-fab>
+          </ion-fab-list>
+      </ion-fab>
+  <ion-fab bottom center small>
+      <button ion-fab (click)="save_solution_to_problem()" ><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+</ion-content>

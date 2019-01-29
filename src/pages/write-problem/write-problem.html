@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar >
+    
+    <ion-title>Write a difficult problem!</ion-title>
+</ion-navbar>
+</ion-header>
+
+    <!---->
+<ion-content padding>
+    <!--<ion-fab top left>
+    <button ion-fab mini color="dark" (click)="close()"><ion-icon name="close-circle"></ion-icon></button>
+</ion-fab>-->
+    <!--<ion-card id='word_problem_card'>-->
+
+        <!--<ion-card-header>
+            Almost finished...
+        </ion-card-header>-->
+        <!--<ion-card-content>-->
+            <ion-textarea round style="background-color: white; padding-top:2px; margin-top:6px" autosize placeholder="Write your word problem here..." [(ngModel)]='word_problem_text' name='word_problem_text'>
+            </ion-textarea>
+            <img id="visual_problem" />
+        <!--</ion-card-content>
+    </ion-card>-->
+    <ion-fab bottom center small>
+        <button ion-fab (click)="getText()"><ion-icon name="pin"></ion-icon></button>
+    </ion-fab>
+</ion-content>

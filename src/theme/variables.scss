@@ -22,7 +22,8 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-
+$toolbar-background: transparent;
+$toolbar-text-color: #000;
 
 
 // Named Color Variables
@@ -84,5 +85,8 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
+//@import url('https://fonts.googleapis.com/css?family=VT323');
+//@import "monospace";
+//@import "VT323";
 @import "roboto";
 @import "noto-sans";

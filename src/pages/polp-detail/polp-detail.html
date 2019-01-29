@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar color="dark">
+        <!--<ion-fab top left>-->
+                <button ion-fab mini color="dark" (click)="close()">
+                    <ion-icon name="close-circle"></ion-icon>
+                </button>   
+            <!--</ion-fab>-->
+            <ion-title >PoLP detail</ion-title>
+        </ion-navbar >
+</ion-header>
+
+<ion-content scroll="true" direction="y">
+        
+  <ion-card id='polp_detail_card' >
+    <ion-card-header center>
+           This is the problem: 
+    </ion-card-header>
+    <ion-card-content>
+        <p>{{wp}}</p>
+        <ion-buttons>
+        <button ion-item *ngIf="show_solve_it" (click)= "solve_it()">
+            <ion-icon name="bulb" ></ion-icon>
+            Solve it
+        </button>
+        <button ion-item *ngIf="!show_solve_it" (click)= "solve_it()">
+            <ion-icon name="bulb" ></ion-icon>
+            Already SOLVED!
+        </button>
+        <button ion-item *ngIf="show_likes" (click)= "liked()" >
+            <ion-icon name="heart" >Love it - ( {{likes}} ) likes</ion-icon>
+            
+        </button>
+    </ion-buttons>
+    <ion-icon *ngIf="!show_likes" > ( {{likes}} ) likes</ion-icon>
+   
+        <img id="pd_visual_problem" />
+   </ion-card-content>
+</ion-card>
+</ion-content>

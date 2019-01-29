@@ -1,22 +1,38 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
+//import { NavController, Nav, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { AngularFireAuth } from 'angularfire2/auth';
+import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
+
+//import { AuthProvider } from "../providers/auth/auth";
+
+//declare var StatusBar:any;
+//declare var SplashScreen:any;
+
 @Component({
-  templateUrl: 'app.html'
+  //templateUrl: 'app.html'
+  template: '<ion-nav #myNav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
-  rootPage:any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  //@ViewChild(Nav) nav: Nav;
+  //platform: any;
+  rootPage: any = LoginPage;
+  pages: Array<{ title: string, component: any, icon: string }>;
+  constructor( platform: Platform, private afAuth: AngularFireAuth, private statusBar: StatusBar, private splashscreen: SplashScreen) {
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      //this.platform = platform;
+      this.afAuth.authState.subscribe(auth => {
+        if (!auth)
+          this.rootPage = LoginPage;
+        else
+          this.rootPage = HomePage;
+      });
       statusBar.styleDefault();
-      splashScreen.hide();
-    });
+      splashscreen.hide();
+    })
   }
 }
-

@@ -1,0 +1,24 @@
+
+<ion-content>
+  <div #polp_explorer id="polp_explorer">
+    <ion-navbar >
+     <!--<ion-fab top start>
+        <button ion-fab mini color="dark" (click)="close()"><ion-icon name="close-circle"></ion-icon></button>
+    </ion-fab>-->
+    
+      <ion-buttons end >
+            <ion-badge>
+                    {{user_points}}
+              </ion-badge> 
+      <button small ion-fab color="dark" mini (click)="gotoProfilePage()"><ion-icon name="person"></ion-icon></button>
+       
+    </ion-buttons>
+    <ion-title center>Explore PoLPs around you!</ion-title>
+</ion-navbar>
+
+    <ion-fab bottom center small>
+        <button ion-fab color="primary" (click)="create_polp()"><ion-icon name="camera"></ion-icon></button>
+    </ion-fab>
+  </div>  
+</ion-content>
+
